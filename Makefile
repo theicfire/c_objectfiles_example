@@ -11,7 +11,7 @@ static:
 dynamic1:
 	gcc -Wall -fPIC -c sweet.c
 	gcc -shared -o libsweet.so sweet.o
-	gcc -o yaa main.c -L. -Wl,-rpath=/home/chase/hs/gdb/pygdb/cython -lsweet
+	gcc -o yaa main.c -L. -Wl,-rpath=`pwd` -lsweet
 	./yaa
 
 dynamic2:
