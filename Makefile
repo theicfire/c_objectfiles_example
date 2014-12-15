@@ -7,6 +7,7 @@ static:
 	@# List with ar -t libsweet.a... woahh note if we don't "make clean" the libsweet.a will just append
 	@# the sweet.o. There will be multiple entries for it.
 	gcc -o yaa main.c -L. -lsweet
+	./yaa
 
 dynamic1:
 	gcc -Wall -fPIC -c sweet.c
