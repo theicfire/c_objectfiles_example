@@ -1,8 +1,9 @@
 all:
 	@echo "Pick: static, dynamic1, dynamic2"
 
+# -fPIC not needed anywhere, but (some) other programs like to have it (for some unkown reason to me)
 static:
-	gcc -Wall -c sweet.c
+	gcc -Wall -fPIC -c sweet.c
 	ar -cvq libsweet.a sweet.o
 	@# List with ar -t libsweet.a... woahh note if we don't "make clean" the libsweet.a will just append
 	@# the sweet.o. There will be multiple entries for it.
